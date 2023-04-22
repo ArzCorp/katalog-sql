@@ -1,0 +1,13 @@
+CREATE TABLE products (
+	id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description VARCHAR(255),
+  price INT UNSIGNED NOT NULL,
+  image TEXT,
+  user_id INT NOT NULL,
+  inventory_quantity INT NOT NULL DEFAULT 1,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+	PRIMARY KEY (`id`),
+  FOREIGN KEY (`user_id`) REFERENCES users(id)
+);
