@@ -3,6 +3,7 @@ CREATE TABLE users (
     name VARCHAR(110) NOT NULL,
     lastname VARCHAR(110) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
+    catalog_color VARCHAR(30) NOT NULL DEFAULT "purple",
     password TEXT NOT NULL,
     catalog_name VARCHAR(255) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
